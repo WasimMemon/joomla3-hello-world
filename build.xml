@@ -14,7 +14,7 @@
     <target name="init" >
         <if>
             <not>
-                 <available file="build.properties"/>
+                <available file="build.properties"/>
             </not>
             <then>
                 <fail message="The file build.properties does not exists." />
@@ -98,13 +98,13 @@
            </fileset>
        </copy> -->
 
-        <!-- Media -->
-        <!-- <echo message="Copying media folder..." />
-        <copy todir="${www.dir}/media" overwrite="true">
-            <fileset dir="${src}/media">
-                <include name="**" />
-            </fileset>
-        </copy> -->
+      <!-- Media -->
+     <echo message="Copying media folder..." />
+     <copy todir="${www.dir}/media/com_${comp.name}" overwrite="true">
+         <fileset dir="${src}/media">
+             <include name="**" />
+         </fileset>
+     </copy>
 
         <!-- Plugins -->
         <!-- <echo message="Copying plugins..." />
